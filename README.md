@@ -3,7 +3,7 @@
 Subject cannot be shared.  
 Try to understand that code.  
 
-main.c => safer
-main2.c => could fail if you are tested with a set len > 32. It can help you to understand main.c
+main.c => safer  
+main2.c => could fail if you are tested with a set len > 32. It can help you to understand main.c  
 
 Good luck <3  
