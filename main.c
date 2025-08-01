@@ -20,20 +20,22 @@ int verifyMatrix()
 		}
 		i++;
 	}
-	return (sum == result) ? len : 0;
+	return sum == result;
 }
 
-void printMatrix(int len)
+void printMatrix()
 {
 	int i = 0;
+	int first = 1;
+
 	while (i < setLen)
 	{
 		if (matrix[i])
 		{
-			printf("%s", set[i]);
-			if (len)
+			if (!first)
 				printf(" ");
-			len--;
+			printf("%s", set[i]);
+			first = 0;
 		}
 		i++;
 	}
@@ -76,14 +78,12 @@ int magic()
 {
 	while (!isEnd())
 	{
-		int len = verifyMatrix();
-		if (len)
-			printMatrix(len - 1);
+		if (verifyMatrix())
+			printMatrix();
 		incrementMatrix();
 	}
-	int len = verifyMatrix();
-	if (len)
-		printMatrix(len - 1);
+	if (verifyMatrix())
+		printMatrix();
 }
 
 int main(int argc, char const *argv[])
