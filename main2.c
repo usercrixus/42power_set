@@ -45,12 +45,12 @@ void findSubsets()
 	}
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
 	if (argc < 3)
 		return 1;
 	result = atoi(argv[1]);
-	set = (char **)(argv + 2);
+	set = (argv + 2);
 	setLen = argc - 2;
 	if (setLen >= 32)
 	{
