@@ -81,7 +81,7 @@ int magic()
 		printMatrix();
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
 	if (argc < 2)
 		return 1;
