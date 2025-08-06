@@ -69,7 +69,7 @@ int isEnd()
 	return 1;
 }
 
-int magic()
+void magic()
 {
 	while (!isEnd())
 	{
