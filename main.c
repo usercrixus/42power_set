@@ -9,15 +9,11 @@ char *matrix;
 int verifyMatrix()
 {
 	int sum = 0;
-	int len = 0;
 	int i = 0;
 	while (i < setLen)
 	{
 		if (matrix[i])
-		{
 			sum += atoi(set[i]);
-			len++;
-		}
 		i++;
 	}
 	return sum == result;
@@ -27,7 +23,6 @@ void printMatrix()
 {
 	int i = 0;
 	int first = 1;
-
 	while (i < setLen)
 	{
 		if (matrix[i])

@@ -28,7 +28,6 @@ void findSubsets()
 {
 	unsigned int totalComb = 1U << setLen;
 	unsigned int mask = 1U;
-
 	while (mask < totalComb)
 	{
 		int sum = 0;
@@ -40,10 +39,8 @@ void findSubsets()
 				sum += atoi(set[i]);
 			i++;
 		}
-
 		if (sum == result)
 			printSubset(mask);
-
 		mask++;
 	}
 }
@@ -52,17 +49,14 @@ int main(int argc, char const *argv[])
 {
 	if (argc < 3)
 		return 1;
-
 	result = atoi(argv[1]);
 	set = (char **)(argv + 2);
 	setLen = argc - 2;
-
 	if (setLen >= 32)
 	{
 		fprintf(stderr, "Error: supports up to 31 elements.\n");
 		return 1;
 	}
-
 	findSubsets();
 	return 0;
 }
