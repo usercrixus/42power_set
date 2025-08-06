@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
 	if (argc < 2)
 		return 1;
 	result = atoi(argv[1]);
-	set = (char **)(argv + 2);
+	set = argv + 2;
 	setLen = argc - 2;
 	matrix = calloc(setLen, sizeof(char));
 	if (!matrix)
